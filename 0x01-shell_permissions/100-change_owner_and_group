@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Set the desired owner and group owner
+owner="vincent"
+group="staff"
+
+# Change owner and group owner for files
+find . -type f -exec chown "$owner:$group" {} +
+
+# Change owner and group owner for directories
+find . -type d -exec chown "$owner:$group" {} +
+
